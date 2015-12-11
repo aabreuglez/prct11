@@ -4,14 +4,14 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'Bibliography/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "Bibliography"
+  spec.name          = "apareferencewithdsl"
   spec.version       = Bibliography::VERSION
   spec.authors       = ["Adrian Abreu"]
   spec.email         = ["alu0100601398@ull.edu.es"]
 
   spec.summary       = "This gem represents an APA list"
   spec.description   = "This gem uses diferents metholodigies, it includes functional programming, tdd..."
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/alu0100601398/prct11"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

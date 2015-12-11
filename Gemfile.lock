@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    Bibliography (0.1.0)
+    apareferencewithdsl (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -91,7 +91,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  Bibliography!
+  apareferencewithdsl!
   bundler (~> 1.10)
   coveralls
   guard
