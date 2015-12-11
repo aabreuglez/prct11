@@ -1,0 +1,3 @@
+class Libro < Bibliography
+    
+end

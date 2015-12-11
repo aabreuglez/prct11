@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Dsl - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="Object.html">Object</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-art">#art</a>
+    
+    <li ><a href="#method-i-epub">#epub</a>
+    
+    <li ><a href="#method-i-libro">#libro</a>
+    
+    <li ><a href="#method-i-per">#per</a>
+    
+    <li ><a href="#method-i-to_s">#to_s</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Dsl">
+  <h1 id="class-Dsl" class="class">
+    class Dsl
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      
+      <div id="attribute-i-apa" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">apa</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-lista" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">lista</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-titulo" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">titulo</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section>
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(titulo) { |self| ... }</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/Bibliography/Dsl.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">titulo</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+    <span class="ruby-ivar">@titulo</span> = <span class="ruby-identifier">titulo</span>
+    <span class="ruby-ivar">@lista</span>=[]
+    
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>  
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">block</span>.<span class="ruby-identifier">arity</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+        <span class="ruby-keyword">yield</span> <span class="ruby-keyword">self</span>
+      <span class="ruby-keyword">else</span>
+       <span class="ruby-identifier">instance_eval</span> <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span> 
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-ivar">@apa</span> = <span class="ruby-constant">Apa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">lista</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-art" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">art</span><span
+            class="method-args">(titulo, atributos={})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="art-source">
+            <pre><span class="ruby-comment"># File lib/Bibliography/Dsl.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">art</span>(<span class="ruby-identifier">titulo</span>, <span class="ruby-identifier">atributos</span>={})
+    <span class="ruby-identifier">a</span> = <span class="ruby-constant">ArtRev</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">atributos</span>[<span class="ruby-value">:autor</span>],<span class="ruby-identifier">titulo</span>,<span class="ruby-identifier">atributos</span>[<span class="ruby-value">:revista</span>],
+    <span class="ruby-identifier">atributos</span>[<span class="ruby-value">:volumen</span>],<span class="ruby-identifier">atributos</span>[<span class="ruby-value">:paginas</span>],<span class="ruby-identifier">atributos</span>[<span class="ruby-value">:fecha</span>])
+    <span class="ruby-identifier">lista</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">a</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-epub" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">epub</span><span
+            class="method-args">(titulo, atributos={})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="epub-source">
+            <pre><span class="ruby-comment"># File lib/Bibliography/Dsl.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">epub</span>(<span class="ruby-identifier">titulo</span>, <span class="ruby-identifier">atributos</span>={})
+    <span class="ruby-identifier">a</span> = <span class="ruby-constant">Epub</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">atributos</span>[<span class="ruby-value">:autor</span>],<span class="ruby-identifier">titulo</span>,<span class="ruby-identifier">atributos</span>[<span class="ruby-value">:soporte</span>],
+    <span class="ruby-identifier">atributos</span>[<span class="ruby-value">:lugar</span>],<span class="ruby-identifier">atributos</span>[<span class="ruby-value">:fecha</span>],<span class="ruby-identifier">atributos</span>[<span class="ruby-value">:fechaconsulta</span>],<span class="ruby-identifier">atributos</span>[<span class="ruby-value">:disponibilidad</span>])
+    <span class="ruby-identifier">lista</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">a</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-libro" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">libro</span><span
+            class="method-args">(titulo, atributos={})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="libro-source">
+            <pre><span class="ruby-comment"># File lib/Bibliography/Dsl.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">libro</span>(<span class="ruby-identifier">titulo</span>, <span class="ruby-identifier">atributos</span>={})
+    <span class="ruby-identifier">a</span> = <span class="ruby-constant">Libro</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">atributos</span>[<span class="ruby-value">:autor</span>],<span class="ruby-identifier">titulo</span>,<span class="ruby-identifier">atributos</span>[<span class="ruby-value">:editorial</span>],
+    <span class="ruby-identifier">atributos</span>[<span class="ruby-value">:edicion</span>],<span class="ruby-identifier">atributos</span>[<span class="ruby-value">:fecha</span>],<span class="ruby-identifier">atributos</span>[<span class="ruby-value">:isbn</span>])
+    <span class="ruby-identifier">lista</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">a</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-per" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">per</span><span
+            class="method-args">(titulo, atributos={})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="per-source">
+            <pre><span class="ruby-comment"># File lib/Bibliography/Dsl.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">per</span>(<span class="ruby-identifier">titulo</span>, <span class="ruby-identifier">atributos</span>={})
+    <span class="ruby-identifier">a</span> = <span class="ruby-constant">ArtPer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">atributos</span>[<span class="ruby-value">:autor</span>],<span class="ruby-identifier">titulo</span>,<span class="ruby-identifier">atributos</span>[<span class="ruby-value">:diario</span>],<span class="ruby-identifier">atributos</span>[<span class="ruby-value">:lugar</span>],<span class="ruby-identifier">atributos</span>[<span class="ruby-value">:fecha</span>],<span class="ruby-identifier">atributos</span>[<span class="ruby-value">:paginacion</span>],<span class="ruby-identifier">atributos</span>[<span class="ruby-value">:columna</span>])
+    <span class="ruby-identifier">lista</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">a</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_s" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_s</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="to_s-source">
+            <pre><span class="ruby-comment"># File lib/Bibliography/Dsl.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
+   <span class="ruby-ivar">@apa</span>.<span class="ruby-identifier">to_s</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
